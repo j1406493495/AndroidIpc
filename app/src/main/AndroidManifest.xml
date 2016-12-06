@@ -1,6 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.whjin.androidipc">
 
+    <permission android:name="com.example.whjin.androidipc.permission.ACCESS_BOOK_SERVICE"
+                android:protectionLevel="normal"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
