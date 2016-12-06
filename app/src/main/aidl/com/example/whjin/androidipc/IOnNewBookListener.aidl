@@ -1,11 +1,10 @@
-// IBookManager.aidl
+// IOnNewBookListener.aidl
 package com.example.whjin.androidipc;
 
 import com.example.whjin.androidipc.IBook;
-import com.example.whjin.androidipc.IOnNewBookListener;
 // Declare any non-default types here with import statements
 
-interface IBookManager {
+interface IOnNewBookListener {
     /**
      * Demonstrates some basic types that you can use as parameters
      * and return values in AIDL.
@@ -13,8 +12,5 @@ interface IBookManager {
     void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat,
             double aDouble, String aString);
 
-    List<IBook> getBookList();
-    void addBook(in IBook book);
-    void registerListener(IOnNewBookListener listener);
-    void unregisterListener(IOnNewBookListener listener);
+    void onNewBookArrived(in IBook newBook);
 }
