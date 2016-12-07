@@ -18,9 +18,19 @@
             </intent-filter>
         </activity>
         <activity android:name=".pkgAidl.BookManagerActivity"/>
+        <activity android:name=".Messenger.MessengerActivity"/>
+        <activity android:name=".ContentProvider.ProviderActivity"/>
 
         <service android:name=".pkgAidl.BookManagerService"
-            android:process=":remote"/>
+                 android:process=":aidlRemote"/>
+        <service android:name=".Messenger.MessengerService"
+                 android:process=":messengerRemote"/>
+
+        <provider
+            android:authorities="com.example.whjin.androidipc.ContentProvider.provider"
+            android:name=".ContentProvider.BookProvider"
+            android:permission="com.example.PROVIDER"
+            android:process=":RemoteProvider"/>
     </application>
 
 </manifest>
